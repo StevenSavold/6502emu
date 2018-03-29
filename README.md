@@ -7,7 +7,8 @@ file so it can be linked with other larger projects to allow for
 fast easy emulation of this iconic CPU.
 
 ## Why another emulator?
-For eduacation and fun.
+For education and fun.
+
 We are designing this project with our education in mind. All contributors
 to this project are students at SUNY Polyechnic Institute in Utica, NY. We
 are trying to furthur our understanding of computer architechure and low 
