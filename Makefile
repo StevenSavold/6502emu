@@ -34,9 +34,13 @@
 #           debug_all - The same thing as all except it calls 
 #                       debug_main.
 #
-#        memleak_test - Calls debug_all, then calls Valgrind with 
+#             memleak - Calls debug_all, then calls Valgrind with 
 #                       the following command:
 #                       valgrind --leak-check=yes chmod a+x $(PROJ_SRC_PATH)/$(MAIN_FILE_NAME).c $(LIB_PATH)/lib$(LIB_NAME)S.so
+#
+#                       It should be noted this is a basic call to valgrind
+#                       and included for "Quality Of Life", more information
+#                       can be colleted by running a custom valgrind command
 #
 #               clean - Deletes the files in $(LIBRARY_PATH), 
 #                       $(INTERMEDIATES_PATH), and 
@@ -98,7 +102,7 @@ debug_all: debug_main
 	export LD_LIBRARY_PATH=$(LIBRARY_PATH)
 
 #builds the project with -g and runs valgrind
-memleak_test: debug_all
+memleak: debug_all
 	valgrind --leak-check=yes chmod a+x $(PROJ_SRC_PATH)/$(MAIN_FILE_NAME).c $(LIB_PATH)/lib$(LIB_NAME)S.so
 
 
