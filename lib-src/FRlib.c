@@ -35,7 +35,7 @@
 //EMULATOR STRUCTURES
 
 /*
-struct Instruction {
+
 
     // Load Store OPs:
 
@@ -126,7 +126,6 @@ struct Instruction {
 	NOP = //no operation
 	RTI = //return from input
 
-} Instruction;
 
 */
 
