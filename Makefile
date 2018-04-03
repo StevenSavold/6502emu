@@ -116,3 +116,4 @@ clean:
 	rm $(LIBRARY_PATH)/lib$(LIB_NAME)S.so
 	rm $(INTERMEDIATES_PATH)/$(LIB_NAME).o
 	rm $(BIN_PATH)/$(EXE_NAME)
+	
