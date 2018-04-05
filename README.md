@@ -32,6 +32,7 @@ This Family of CPUs powered machines like:
 - [ ] Multiple chip support
 - [ ] Periferal support
 - [ ] Simulatainious emulation of multiple chips
+- [ ] 6502 assembler
 - [ ] and more...
 
 ## Useful Links and References
