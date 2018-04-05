@@ -24,5 +24,16 @@ This Family of CPUs powered machines like:
  - Commodore 64
  - and many more
 
-## Emulator Features
-Coming Soon
+## Planned Emulator Features 
+(NOTE: Currently implemented features have a check mark)
+- [ ] Well documented and easy to read code
+- [ ] Full simulation of circutry inside the CPU
+- [x] Portable code in the form of a shared library
+- [ ] Multiple chip support
+- [ ] Periferal support
+- [ ] Simulatainious emulation of multiple chips
+- [ ] and more...
+
+## Useful Links and References
+- Online 6502 Emulator:
+  - http://visual6502.org/JSSim/expert.html(http://visual6502.org/JSSim/expert.html)
