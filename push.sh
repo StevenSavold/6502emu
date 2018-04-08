@@ -1,17 +1,30 @@
+#!/bin/bash
 #Script to auto push the project to github
+#Author: Steven Savold
 
-#clean the project
-make clean
+#NOTE: this script should be called while in the same directory as the file
 
-#add all files to the commit
-git add *
+echo \n\n***This scrpit automatically pushes the current project to the GitHub repo****\n\n
+echo would you like to continue? (y/n)
+read ans
+if [ans = "y"] 
+then 
+    #clean the project
+    make clean
 
-#ask user for changes
-echo What are the changes you made?
-read changes
+    #add all files to the commit
+    git add *
 
-#make commit with the users changes
-git commit -m "$changes"
+    #ask user for changes
+    echo Please write a short sentence to describe what you changed.
+    read changes
 
-#push to github
-git push
+    #make commit with the users changes
+    git commit -m "$changes"
+
+    #push to github, this will require the users credetials for github
+    git push
+else 
+    echo aborting commit...
+fi
+
