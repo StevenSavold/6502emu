@@ -9,6 +9,9 @@
  * 
  * 
  */
+#ifndef _6502_H_
+#define _6502_H_
+
 #include <stdint.h>
 
 #ifdef __cplusplus
@@ -114,3 +117,5 @@ union word {
 #ifdef __cplusplus
 } //End of extern "C"
 #endif
+
+#endif //_6502_H_
