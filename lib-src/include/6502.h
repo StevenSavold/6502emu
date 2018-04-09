@@ -45,11 +45,61 @@ typedef struct bus bus;
 /*
  * This is a struct to define the layout of
  * the bus used to talk with peripherals.
+ * 
+ * The layout of the actual pins of the 6502
+ * can be found here:
+ *     https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/MOS6502.svg/215px-MOS6502.svg.png
  */
 struct bus {
 
-    //TODO:
-    /* Fill this with the architechure of the 6502 bus */
+	/* Architechure consists of:
+	 *     - 8 bit wide data bus
+	 * 
+	 *     - 16 bit wide adress bus
+	 * 
+	 *     - some control lines that 
+	 *       carried syncronisation 
+	 *       signals throughout the
+	 *       system.
+	 * 
+	 * The pins should be accessed as follows:
+	 *          1 -> VSS
+	 *          2 -> RDY
+	 *          3 -> 01 (OUT)
+	 *          4 -> IRQ
+	 *          5 -> N.C.
+	 *          6 -> NMI
+	 *          7 -> SYNC
+	 *          8 -> VCC
+	 *     9 - 25 -> Addr
+	 *    26 - 33 -> Data
+	 *         34 -> R/W
+	 *         35 -> N.C.
+	 *         36 -> N.C.
+	 *         37 -> 01 (IN)
+	 *         38 -> SO
+	 *         39 -> 02 (OUT)
+	 *         40 -> RES 
+	 */
+
+
+	/* Pin 33 -> D0, Pin 26 -> D7 */
+	byte data; //Data lines
+
+	/* Pin 9 -> A0, Pin 25 -> A15 */
+	word addr; //Address lines
+
+	/* Pins 1 - 8, and 34 - 40 are control pins
+	 * meaing...  bits 1 - 8 are Pins 1 - 8 as shown in the 
+	 *            above listings 
+	 * 
+	 * and...     bits 34 - 40 are Pins 9 - 15
+	 * 
+	 * leaving... bit 0 to be empty, this is good because both
+	 *            signed and unsigned versions of ctrl will
+	 *            be the same  
+	 */
+	word ctrl; //Control lines (Should be used as one bit per line) 
 
 };
 
