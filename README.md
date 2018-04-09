@@ -38,3 +38,4 @@ This Family of CPUs powered machines like:
 ## Useful Links and References
 - [Online 6502 Emulator](http://visual6502.org/JSSim/expert.html)
 - [MiniAT Home Page](http://miniat.org/)
+- [6502 Instruction Set](http://www.llx.com/~nparker/a2/opcodes.html)
