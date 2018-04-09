@@ -31,7 +31,7 @@ This Family of CPUs powered machines like:
 - [x] Portable code in the form of a shared library
 - [ ] Multiple chip support
 - [ ] Periferal support
-- [ ] Simulatainious emulation of multiple chips
+- [ ] Concurrent emulation of multiple chips
 - [ ] 6502 assembler
 - [ ] and more...
 
