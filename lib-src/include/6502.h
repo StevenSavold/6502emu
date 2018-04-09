@@ -90,10 +90,10 @@ struct bus {
 	word addr; //Address lines
 
 	/* Pins 1 - 8, and 34 - 40 are control pins
-	 * meaing...  bits 1 - 8 are Pins 1 - 8 as shown in the 
+	 * meaing...  Pins 1 - 8 are bits 1 - 8 in ctrl as shown in the 
 	 *            above listings 
 	 * 
-	 * and...     bits 34 - 40 are Pins 9 - 15
+	 * and...     Pins 34 - 40 are bits 9 - 15 in ctrl
 	 * 
 	 * leaving... bit 0 to be empty, this is good because both
 	 *            signed and unsigned versions of ctrl will
