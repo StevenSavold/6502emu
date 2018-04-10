@@ -11,6 +11,11 @@
 
 #ifndef _FRLIB_H_
 #define _FRLIB_H_
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <string.h>
 
 struct stat fileStat;
 int test_file(struct stat fileStat);
