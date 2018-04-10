@@ -4,7 +4,7 @@
 **                      6502 CPU. This is the file read control used to control the-
 **                      file input.
 *
-* PROGRAM DEVELOPERS: Jesse Lembo + Lukas Mallory + Steven;
+* PROGRAM DEVELOPERS: Jesse Lembo + Lukas Mallory + Steven Savold;
 * DATE STARTED: MARCH 26, 2018;
 * DATE COMPLETED: N/A
  */
