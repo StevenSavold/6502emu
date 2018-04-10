@@ -11,13 +11,14 @@
 
 
 
-#include <stdlib.h>
-#include "6502lib.h"
+
+//#include "6502lib.h"
 #include "FRlib.h"
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc , char **argv) {
 //  VARIABLES
