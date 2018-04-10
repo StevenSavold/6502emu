@@ -5,7 +5,7 @@
 **                      emulator and its commands. The emulator control is-
 **                      stored inside the 6502.c file.;
 *
-* PROGRAM DEVELOPERS: Jesse Lembo + Lukas Mallory + Steven Savold;
+* PROGRAM DEVELOPERS: Jesse Lembo + Lukas Mallory;
 * DATE STARTED: MARCH 26, 2018;
 * DATE COMPLETED: N/A
  */
