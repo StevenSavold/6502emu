@@ -1,9 +1,8 @@
 /*
-*  PROGRAM NAME: 6502 Emulator Control
+*  PROGRAM NAME: File Read Control
 *  PROGRAM DESCRIPTION: This program is used to run an emulator for the-
-**                      6502 CPU. This is the main file used to control the-
-**                      emulator. The emulator itself is contained within-
-**                      the programmer made 6502lib.c and 6502lib.h files.;
+**                      6502 CPU. This is the file read control used to control the-
+**                      file input.
 *
 * PROGRAM DEVELOPERS: Jesse Lembo + Lukas Mallory + Steven;
 * DATE STARTED: MARCH 26, 2018;
