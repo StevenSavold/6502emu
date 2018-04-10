@@ -17,4 +17,8 @@
 struct stat fileStat;
 int test_file(struct stat fileStat);
 
+void read_file(FILE *infile);
+
+void handle_file(char *line, FILE *infile);
+
 #endif
