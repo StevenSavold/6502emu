@@ -1,10 +1,8 @@
 /*
-*  PROGRAM NAME: File Read Lib
+*  PROGRAM NAME: File Read Library 
 *  PROGRAM DESCRIPTION: This program is used to run an emulator for the-
 **                      6502 CPU. This is the library file used to store the-
-**                      emulator's file reading functions and its commands. The emulator control is-
-**                      stored inside the 6502.c file.;
-*
+**                      emulator's file reading function declarations. 
 * PROGRAM DEVELOPERS: Jesse Lembo + Lukas Mallory;
 * DATE STARTED: MARCH 26, 2018;
 * DATE COMPLETED: N/A
