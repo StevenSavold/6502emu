@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script to auto push the project to github
+#VERY simple script to auto push the project to github
 #Author: Steven Savold
 
 #NOTE: this script should be called while in the same directory as the file

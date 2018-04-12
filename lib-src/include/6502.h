@@ -43,6 +43,67 @@ typedef struct bus bus;
 
 
 /*
+ * This is a union to make working with bytes easier,
+ * You can access byte data with:
+ *      byte x = 0xFF;
+ * 
+ * signed form     -> x.s
+ * unsigned form   -> x.u
+ *          -- or in --
+ * individual bits -> x.bit1
+ */
+union byte {
+	struct {
+		ubyte bit0 : 1;
+		ubyte bit1 : 1;
+		ubyte bit2 : 1;
+		ubyte bit3 : 1;
+		ubyte bit4 : 1;
+		ubyte bit5 : 1;
+		ubyte bit6 : 1;
+		ubyte bit7 : 1;
+	};
+	sbyte s;
+	ubyte u;
+};
+
+
+/*
+ * This is a union to make working with words easier,
+ * You can access word data with:
+ *       word x = 0xFFFF;
+ * 
+ * signed form     -> x.s
+ * unsigned form   -> x.u
+ *          -- or in --
+ * individual bits -> x.bit10
+ */
+union word {
+	struct {
+		uword bit0  : 1;
+		uword bit1  : 1;
+		uword bit2  : 1;
+		uword bit3  : 1;
+		uword bit4  : 1;
+		uword bit5  : 1;
+		uword bit6  : 1;
+		uword bit7  : 1;
+		uword bit8  : 1;
+		uword bit9  : 1;
+		uword bit10 : 1;
+		uword bit11 : 1;
+		uword bit12 : 1;
+		uword bit13 : 1;
+		uword bit14 : 1;
+		uword bit15 : 1;
+	};
+	sword s;
+	uword u;
+};
+
+
+
+/*
  * This is a struct to define the layout of
  * the bus used to talk with peripherals.
  * 
@@ -101,66 +162,6 @@ struct bus {
 	 */
 	word ctrl; //Control lines (Should be used as one bit per line) 
 
-};
-
-
-/*
- * This is a union to make working with bytes easier,
- * You can access byte data with:
- *      byte x = 0xFF;
- * 
- * signed form     -> x.s
- * unsigned form   -> x.u
- *          -- or in --
- * individual bits -> x.bit1
- */
-union byte {
-	struct {
-		ubyte bit0 : 1;
-		ubyte bit1 : 1;
-		ubyte bit2 : 1;
-		ubyte bit3 : 1;
-		ubyte bit4 : 1;
-		ubyte bit5 : 1;
-		ubyte bit6 : 1;
-		ubyte bit7 : 1;
-	};
-	sbyte s;
-	ubyte u;
-};
-
-
-/*
- * This is a union to make working with words easier,
- * You can access word data with:
- *       word x = 0xFFFF;
- * 
- * signed form     -> x.s
- * unsigned form   -> x.u
- *          -- or in --
- * individual bits -> x.bit10
- */
-union word {
-	struct {
-		uword bit0  : 1;
-		uword bit1  : 1;
-		uword bit2  : 1;
-		uword bit3  : 1;
-		uword bit4  : 1;
-		uword bit5  : 1;
-		uword bit6  : 1;
-		uword bit7  : 1;
-		uword bit8  : 1;
-		uword bit9  : 1;
-		uword bit10 : 1;
-		uword bit11 : 1;
-		uword bit12 : 1;
-		uword bit13 : 1;
-		uword bit14 : 1;
-		uword bit15 : 1;
-	};
-	sword s;
-	uword u;
 };
 
 
