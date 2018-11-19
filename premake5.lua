@@ -23,8 +23,8 @@ project "cpu6502"
 
     files
     {
-        "%{prj.name}/src/**.c",
-        "%{prj.name}/src/**.h"
+        "%{prj.name}/**.c",
+        "%{prj.name}/**.h"
     }
 
     -- Filter for windows system only
@@ -80,8 +80,8 @@ project "example6502"
 
     files
     {
-        "%{prj.name}/src/**.c",
-        "%{prj.name}/src/**.h"
+        "%{prj.name}/**.c",
+        "%{prj.name}/**.h"
     }
 
     includedirs
