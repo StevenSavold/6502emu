@@ -44,3 +44,4 @@ To learn more about Premake and how to use it, please visit the [Premake wiki pa
 - [Online 6502 Emulator](http://visual6502.org/JSSim/expert.html)
 - [MiniAT Home Page](http://miniat.org/)
 - [6502 Instruction Set](http://www.llx.com/~nparker/a2/opcodes.html)
+- [Premake wiki page](https://github.com/premake/premake-core/wiki)
