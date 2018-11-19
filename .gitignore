@@ -1,17 +1,23 @@
 # Directories
-.vs/
+#   Project specific
 bin/
 bin-int/
 
-# Files
+#   Windows
+.vs/
 
-#   VS files
+#   Linux
+#   MacOSX
+
+# Files
+#   Windows
 *.user
 *.sln
 *.vcxproj
 *.filters
 
-#   Linux files
+#   Linux 
+Makefile
 
-#   XCode files
+#   MacOSX
 
