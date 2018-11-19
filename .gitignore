@@ -1,0 +1,17 @@
+# Directories
+.vs/
+bin/
+bin-int/
+
+# Files
+
+#   VS files
+*.user
+*.sln
+*.vcxproj
+*.filters
+
+#   Linux files
+
+#   XCode files
+
