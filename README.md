@@ -35,6 +35,11 @@ This Family of CPUs powered machines like:
 - [ ] 6502 assembler
 - [ ] and more...
 
+## How to build
+Our code uses [Premake](https://github.com/premake/premake-core) as our build system. Premake is a lua based build script generator. Our perticular script is set up to generate Visual Studio 2017 project files, XCode project files, and a Makefile. To generate any of these files simply run the batch/shell script for the corresponding files you wish to generate. For example, to generate Visual Studio 2017 project files, run the 'CreateBuild-vs2017.bat' file. 
+
+To learn more about Premake and how to use it, please visit the [Premake wiki page](https://github.com/premake/premake-core/wiki).
+
 ## Useful Links and References
 - [Online 6502 Emulator](http://visual6502.org/JSSim/expert.html)
 - [MiniAT Home Page](http://miniat.org/)
