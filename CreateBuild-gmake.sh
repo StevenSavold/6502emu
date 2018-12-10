@@ -1,1 +1,1 @@
-./vendor/Premake/Premake-linux/premake5 gmake
+./vendor/Premake/Premake-Linux/premake5 gmake

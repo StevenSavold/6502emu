@@ -32,6 +32,7 @@ project "cpu6502"
 
 	includedirs
     {
+	"cpu6502/src",
         "vendor/spdlog/include"
     }
 
@@ -95,7 +96,7 @@ project "example6502"
     includedirs
     {
         "cpu6502/src",
-		"vendor/spdlog/include"
+	"vendor/spdlog/include"
     }
 
     links

@@ -1,4 +1,4 @@
-#include <spd/spdlog.h>
+#include <spdlog/spdlog.h>
 #include "Core.h"
 
 
@@ -12,7 +12,7 @@ public:
     inline static std::shared_ptr<spdlog::logger>& GetCoreInstance() { return s_CoreLogger; }
     inline static std::shared_ptr<spdlog::logger>& GetClientInstance() { return s_ClientLogger; }
 
-}
+};
 
 #define _6502_LOG_TRACE(...) ::Log::GetCoreInstance( )->trace(__VA_ARGS__)
 #define _6502_LOG_INFO(...)  ::Log::GetCoreInstance( )->info(__VA_ARGS__)

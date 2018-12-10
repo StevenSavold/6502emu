@@ -22,7 +22,7 @@
 #endif
 
 
-
+#if 0
 typedef int8_t  sbyte;
 typedef uint8_t ubyte;
 
@@ -167,3 +167,5 @@ struct bus {
 	word ctrl; //Control lines (Should be used as one bit per line) 
 
 };
+
+#endif
