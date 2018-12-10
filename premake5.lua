@@ -32,7 +32,7 @@ project "cpu6502"
 
 	includedirs
     {
-	"cpu6502/src",
+	    "cpu6502/src",
         "vendor/spdlog/include"
     }
 
@@ -40,11 +40,17 @@ project "cpu6502"
     filter "system:windows"
 		cppdialect "C++17"
         staticruntime "On"
+        systemversion "latest"
         
         defines
         {
             "_6502_PLATFORM_WINDOWS",
             "_6502_BUILD_DLL"
+        }
+
+        postbuildcommands
+        {
+           ("{COPY} %{cfg.buldtarget.relpath} ../bin" .. outputdir .. "/example6502") 
         }
 
     -- Filter for Linux system only
@@ -96,7 +102,7 @@ project "example6502"
     includedirs
     {
         "cpu6502/src",
-	"vendor/spdlog/include"
+	    "vendor/spdlog/include"
     }
 
     links
@@ -108,6 +114,7 @@ project "example6502"
     filter "system:windows"
 		cppdialect "C++17"
         staticruntime "On"
+        systemversion "latest"
         
         defines
         {
