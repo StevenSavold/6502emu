@@ -2,7 +2,7 @@
 -- Author: Steven Savold
 
 -- workspace (Solution) for the entire emulator 
-workspace "Emulator"
+workspace "6502emu"
     architecture "x86"
     configurations
     {
@@ -16,22 +16,30 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 project "cpu6502"
     location "cpu6502"
     kind "SharedLib"
-    language "C"
+    language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "6502pch.h"
+    pchsource "6502pch.cpp"
+
     files
     {
-        "%{prj.name}/**.c",
-        "%{prj.name}/**.h"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/src/**.h"
+    }
+
+	includedirs
+    {
+        "vendor/spdlog/include"
     }
 
     -- Filter for windows system only
     filter "system:windows"
+		cppdialect "C++17"
         staticruntime "On"
-        systemversion "latest" -- using the latest Windows SDK version
-
+        
         defines
         {
             "_6502_PLATFORM_WINDOWS",
@@ -73,20 +81,21 @@ project "cpu6502"
 project "example6502"
     location "example6502"
     kind "ConsoleApp"
-    language "C"
+    language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files
     {
-        "%{prj.name}/**.c",
+        "%{prj.name}/**.cpp",
         "%{prj.name}/**.h"
     }
 
     includedirs
     {
-        "cpu6502/src"
+        "cpu6502/src",
+		"vendor/spdlog/include"
     }
 
     links
@@ -96,9 +105,9 @@ project "example6502"
 
     -- Filter for windows system only
     filter "system:windows"
+		cppdialect "C++17"
         staticruntime "On"
-        systemversion "latest" -- using the latest Windows SDK version
-
+        
         defines
         {
             "_6502_PLATFORM_WINDOWS"
