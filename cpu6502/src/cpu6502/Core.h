@@ -7,6 +7,7 @@
  * the 6502 chip
  */
 #pragma once 
+#include <type_traits>
 
  /* if the platform is windows, you need __declspec calls */
 #ifdef _6502_PLATFORM_WINDOWS

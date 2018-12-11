@@ -5,13 +5,20 @@
 #include "Allocators.h"
 
 
-void InstructionFetchAndExec() 
+void InstructionFetchAndExec(cpu6502* proc) 
 {
-	// Fetch the instructioin from memory (this should take 4 cycles)
-	Instruction line = ReadInstructionFromMemory(Registers.InstructionPointer);
+	_6502_LOG_TRACE("Begin Instruction Fetch for CPU #{} from location PC = {}", proc->ID, proc.Registers.PC);
+
+	// Fetch the instructioin from memory
+	Instruction line = ReadInstructionFromMemory(proc.Registers.PC);
+
+	_6502_LOG_TRACE("End Instruction Fetch for CPU #{} from location PC = {}", proc->ID, proc.Registers.PC);
+	_6502_LOG_TRACE("Begin Instruction Execute opcode = '{}' for CPU #{}", line.opcode, proc->ID);
 
 	// Execute the instruction
 	MOS::opcodes[line.opcode](line.args);
+
+	_6502_LOG_TRACE("End Instruction Execute opcode = '{}' for CPU #{}", line.opcode, proc->ID);
 }
 
 Instruction ReadInstructionFromMemory(uword& InstructionAddr)
@@ -24,6 +31,7 @@ Instruction ReadInstructionFromMemory(uword& InstructionAddr)
 
 ubyte ReadByteFromMemory(uword& addr)
 {
+	_6502_LOG_TRACE("Reading location {} from memory", spdlog::to_hex(addr));
 	const MemoryBus& mem = GetMemoryBusInst();
 	return mem[addr];
 }
