@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 
 /* This is the pre-compiled header for the 6502 
  * project. Any #includes that will not be frequently 
@@ -18,6 +18,9 @@
 #include <algorithm>
 #include <fstream>
 #include <chrono>
+
+// Logging
+#include "cpu6502/Logging.h"
 
 /* windows only includes */
 #ifdef _6502_PLATFORM_WINDOWS

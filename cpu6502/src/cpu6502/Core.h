@@ -18,11 +18,10 @@
 
 /* if the platform is not windows, you don't need __declspec calls */
 #else
-    #define _6502_API /*Empty_6502_API*/
+    #define _6502_API /* Empty_6502_API */
 #endif
 
 
-#if 0
 typedef int8_t  sbyte;
 typedef uint8_t ubyte;
 
@@ -115,7 +114,7 @@ union word {
  * can be found here:
  *     https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/MOS6502.svg/215px-MOS6502.svg.png
  */
-struct bus {
+struct _6502_API bus {
 
 	/* Architechure consists of:
 	 *     - 8 bit wide data bus
@@ -167,5 +166,3 @@ struct bus {
 	word ctrl; //Control lines (Should be used as one bit per line) 
 
 };
-
-#endif

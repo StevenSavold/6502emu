@@ -1,3 +1,4 @@
+#include "6502pch.h"
 #include "Logging.h"
 #include <spdlog/sinks/stdout_color_sinks.h>
 

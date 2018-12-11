@@ -1,5 +1,6 @@
-#include <spdlog/spdlog.h>
+#pragma once
 #include "Core.h"
+#include <spdlog/spdlog.h>
 
 
 class _6502_API Log {
