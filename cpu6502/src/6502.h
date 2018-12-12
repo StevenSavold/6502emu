@@ -14,6 +14,11 @@
 #include "cpu6502/Core.h"
 #include "cpu6502/Logging.h"
 
+#include "cpu6502/Processor.h"
+#include "cpu6502/Instructions.h"
+#include "cpu6502/SystemMemory.h"
+#include "cpu6502/Allocators.h"
+
 /*   ENTRY POINT   */
 #include "cpu6502/EntryPoint.h"
 /* END ENTRY POINT */

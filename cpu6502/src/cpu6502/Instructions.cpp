@@ -4,7 +4,7 @@
 #include "Instructions.h"
 #include "Allocators.h"
 
-
+#if 0
 void InstructionFetchAndExec(cpu6502* proc) 
 {
 	_6502_LOG_TRACE("Begin Instruction Fetch for CPU #{} from location PC = {}", proc->ID, proc.Registers.PC);
@@ -57,3 +57,4 @@ ubyte* ReadOpcodeArgsFromMemory(uword& IP, ubyte opcode)
 	ubyte* args = ReadArgsFromMemory(IP, NumArgs);
 	return args;
 }
+#endif

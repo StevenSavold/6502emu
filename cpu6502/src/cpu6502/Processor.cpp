@@ -10,12 +10,12 @@ cpu6502* DoClockCycle(cpu6502* proc)
         return nullptr;
     }
 
-    _6502_LOG_TRACE("Begin Clock Cycle #{} for CPU #{}", proc->ClockCount, proc->ID);
+    _6502_LOG_TRACE("Begin Clock Cycle #{} for CPU #{}", proc->ClockCycle, proc->ID);
 
     /* Do Clock Cycle Here */
 
-    _6502_LOG_TRACE("Ending Clock Cycle #{} for CPU #{}", proc->ClockCount, proc->ID);
-    (proc->ClockCount)++;
+    _6502_LOG_TRACE("Ending Clock Cycle #{} for CPU #{}", proc->ClockCycle, proc->ID);
+    (proc->ClockCycle)++;
 
     return proc;
 }

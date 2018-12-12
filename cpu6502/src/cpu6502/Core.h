@@ -7,7 +7,7 @@
  * the 6502 chip
  */
 #pragma once 
-#include <type_traits>
+#include <cstdint>
 
  /* if the platform is windows, you need __declspec calls */
 #ifdef _6502_PLATFORM_WINDOWS
@@ -37,7 +37,7 @@ typedef union word word;
 /*
  * The data type for representing the 6502 chip
  */
-typedef struct cpu6502 cpu6502;
+//typedef struct cpu6502 cpu6502;
 
 /* 
  * The data type for defining the attributes of the bus the 6502 
