@@ -50,7 +50,7 @@ project "cpu6502"
 
         postbuildcommands
         {
-           ("{COPY} %{cfg.buldtarget.relpath} ../bin" .. outputdir .. "/example6502") 
+           ("{COPY} %{cfg.buildtarget.relpath} ../bin" .. outputdir .. "/example6502") 
         }
 
     -- Filter for Linux system only
