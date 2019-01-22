@@ -17,12 +17,13 @@ project "cpu6502"
     location "cpu6502"
     kind "SharedLib"
     language "C++"
+    cppdialect "C++17"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-    pchheader "6502pch.h"
-    pchsource "6502pch.cpp"
+    pchheader "src/6502pch.h"
+    pchsource "src/6502pch.cpp"
 
     files
     {
@@ -32,13 +33,18 @@ project "cpu6502"
 
 	includedirs
     {
-	    "cpu6502/src",
-        "vendor/spdlog/include"
+	    "cpu6502/src/",
+        "vendor/spdlog/include/"
+    }
+
+    sysincludedirs
+    {
+	    "cpu6502/src/",
+        "vendor/spdlog/include/"
     }
 
     -- Filter for windows system only
     filter "system:windows"
-		cppdialect "C++17"
         staticruntime "On"
         systemversion "latest"
         
@@ -89,6 +95,7 @@ project "example6502"
     location "example6502"
     kind "ConsoleApp"
     language "C++"
+    cppdialect "C++17"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -101,8 +108,14 @@ project "example6502"
 
     includedirs
     {
-        "cpu6502/src",
-	    "vendor/spdlog/include"
+        "cpu6502/src/",
+	    "vendor/spdlog/include/"
+    }
+
+    sysincludedirs
+    {
+        "cpu6502/src/",
+	    "vendor/spdlog/include/"
     }
 
     links
@@ -112,7 +125,6 @@ project "example6502"
 
     -- Filter for windows system only
     filter "system:windows"
-		cppdialect "C++17"
         staticruntime "On"
         systemversion "latest"
         
