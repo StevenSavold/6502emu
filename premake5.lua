@@ -22,8 +22,8 @@ project "cpu6502"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-    pchheader "src/6502pch.h"
-    pchsource "src/6502pch.cpp"
+    pchheader "%{prj.name}/src/6502pch.h"
+    pchsource "%{prj.name}/src/6502pch.cpp"
 
     files
     {
@@ -33,13 +33,13 @@ project "cpu6502"
 
 	includedirs
     {
-	    "cpu6502/src/",
+	"cpu6502/src/",
         "vendor/spdlog/include/"
     }
 
     sysincludedirs
     {
-	    "cpu6502/src/",
+	"cpu6502/src/",
         "vendor/spdlog/include/"
     }
 
